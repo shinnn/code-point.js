@@ -1,6 +1,6 @@
 {
   "name": "code-point",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Get a UTF-16-encoded code point number of a character",
   "main": "./dist/code-point-cjs.js",
   "files": [
