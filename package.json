@@ -3,9 +3,7 @@
   "version": "0.0.0",
   "description": "Get a UTF-16-encoded code point number of a character",
   "main": "./dist/code-point-cjs.js",
-  "bin": "./cli.js",
   "files": [
-    "cli.js",
     "dist/code-point-cjs.js",
     "LICENSE"
   ],
