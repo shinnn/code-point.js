@@ -1,4 +1,4 @@
-/*
+/*!
  * String.prototype.codePointAt v0.2.0 | MIT (c) Mathias Bynens (@mathias)
  * http://mths.be/codepointat
  *

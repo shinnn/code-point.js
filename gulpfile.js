@@ -15,7 +15,7 @@ var bower = require('./bower.json');
 var funName = toCamelCase(pkg.name);
 
 var banner = [
-  '/*',
+  '/*!',
   ' * String.prototype.codePointAt v0.2.0 | MIT (c) Mathias Bynens (@mathias)',
   ' * http://mths.be/codepointat',
   ' *',
