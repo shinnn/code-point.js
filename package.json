@@ -5,7 +5,7 @@
   "main": "./dist/code-point-cjs.js",
   "files": [
     "dist/code-point-cjs.js",
-    "LICENSE"
+    "LICENSE.md"
   ],
   "scripts": {
     "test": "gulp test",
