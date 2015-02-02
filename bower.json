@@ -31,13 +31,11 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
+    "*.js",
+    "*.json",
     "*.yml",
-    "node_modules",
-    "src",
     "dist/code-point-cjs.js",
-    "test.js",
-    "gulpfile.js",
-    "package.json",
-    "component.json"
+    "node_modules",
+    "src"
   ]
 }

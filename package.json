@@ -2,10 +2,9 @@
   "name": "code-point",
   "version": "1.0.1",
   "description": "Get a UTF-16-encoded code point number of a character",
-  "main": "./dist/code-point-cjs.js",
+  "main": "dist/code-point-cjs.js",
   "files": [
-    "dist/code-point-cjs.js",
-    "LICENSE.md"
+    "dist/code-point-cjs.js"
   ],
   "scripts": {
     "test": "gulp test",
@@ -17,14 +16,7 @@
     "email": "snnskwtnb@gmail.com",
     "url": "https://github.com/shinnn"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shinnn/code-point.js.git"
-  },
-  "bugs": {
-    "url": "https://github.com/shinnn/code-point.js/issues"
-  },
-  "homepage": "https://github.com/shinnn/code-point.js",
+  "repository": "shinnn/code-point.js",
   "licenses": [
     {
       "type": "MIT",
@@ -48,22 +40,28 @@
     "client-side"
   ],
   "devDependencies": {
-    "gulp": "^3.8.8",
+    "gulp": "^3.8.10",
     "gulp-footer": "^1.0.5",
-    "gulp-header": "^1.1.1",
-    "gulp-jscs": "^1.1.2",
-    "gulp-jshint": "^1.8.5",
-    "gulp-jsonlint": "^0.1.0",
-    "gulp-load-plugins": "^0.7.0",
+    "gulp-header": "^1.2.2",
+    "gulp-jscs": "^1.4.0",
+    "gulp-jshint": "^1.9.1",
+    "gulp-jsonlint": "^1.0.2",
+    "gulp-load-plugins": "^0.8.0",
     "gulp-rename": "^1.2.0",
-    "istanbul": "^0.3.2",
+    "istanbul": "^0.3.5",
     "istanbul-coveralls": "^1.0.1",
     "jshint-stylish": "^1.0.0",
-    "merge-stream": "^0.1.6",
+    "merge-stream": "^0.1.7",
     "require-uncached": "^1.0.2",
     "rimraf": "^2.2.8",
     "string.prototype.codepointat": "^0.2.0",
-    "tape": "^3.0.0",
+    "tape": "^3.5.0",
     "to-camel-case": "^0.2.1"
+  },
+  "jscsConfig": {
+    "preset": "google",
+    "maximumLineLength": 98,
+    "requireBlocksOnNewline": true,
+    "validateLineBreaks": "LF"
   }
 }
