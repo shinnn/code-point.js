@@ -25,10 +25,11 @@ var banner = [
 ].join('\n');
 
 gulp.task('lint', function() {
-  gulp.src(['{,src/}*.js'])
+  gulp.src('{,src/}*.js')
+    .pipe($.jscs(pkg.jscsConfig))
     .pipe($.jshint())
     .pipe($.jshint.reporter(stylish))
-    .pipe($.jscs('.jscs.json'));
+    .pipe($.jshint.reporter('fail'));
   gulp.src('*.json')
     .pipe($.jsonlint())
     .pipe($.jsonlint.reporter());
@@ -38,32 +39,31 @@ gulp.task('clean', rimraf.bind(null, 'dist'));
 
 gulp.task('build', ['lint', 'clean'], function() {
   return mergeStream(
-    gulp.src(['src/*.js'])
+    gulp.src('src/*.js')
       .pipe($.header(banner + '!function() {\n', {pkg: pkg}))
       .pipe($.footer('\nwindow.<%= funName %> = <%= funName %>;\n}();\n', {
         funName: funName
       }))
-      .pipe($.rename(bower.main))
-      .pipe(gulp.dest('')),
-    gulp.src(['src/*.js'])
+      .pipe($.rename(bower.main)),
+    gulp.src('src/*.js')
       .pipe($.header(banner, {pkg: pkg}))
       .pipe($.footer('\nmodule.exports = <%= funName %>;\n', {funName: funName}))
       .pipe($.rename(pkg.main))
-      .pipe(gulp.dest(''))
-  );
+  )
+    .pipe(gulp.dest(''));
 });
 
 gulp.task('test', ['build'], function(cb) {
-  exec('node test.js', function(err, stderr, stdout) {
-    console.log(stderr);
-    console.log(stdout);
+  exec('node test.js', function(err, stdout, stderr) {
+    process.stdout.write(stdout);
+    process.stderr.write(stderr);
     cb(err);
   });
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['{,src/}*.js'], ['test']);
-  gulp.watch(['*.json', '.jshintrc'], ['lint']);
+  gulp.watch('{,src/}*.js', ['test']);
+  gulp.watch('{*.json,.jshintrc}', ['lint']);
 });
 
 gulp.task('default', ['test', 'watch']);
