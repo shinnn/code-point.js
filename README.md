@@ -1,5 +1,7 @@
 # code-point.js
 
+[![NPM version](https://img.shields.io/npm/v/code-point.svg)](https://www.npmjs.com/package/code-point)
+[![Bower version](https://img.shields.io/bower/v/code-point.svg)](https://github.com/shinnn/code-point.js/releases)
 [![Build Status](https://travis-ci.org/shinnn/code-point.js.svg?branch=master)](https://travis-ci.org/shinnn/code-point.js)
 [![Build status](https://ci.appveyor.com/api/projects/status/riy7hl0n8e2vprch?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/code-point-js)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/code-point.js.svg)](https://coveralls.io/r/shinnn/code-point.js)
@@ -19,16 +21,16 @@ codePoint('嶲'); //=> 195060
 
 ### Package managers
 
-#### [npm](https://www.npmjs.org/) [![NPM version](https://badge.fury.io/js/code-point.svg)](https://www.npmjs.org/package/code-point)
+#### [npm](https://www.npmjs.com/)
 
 ```sh
-npm i --save code-point
+npm install code-point
 ```
 
-#### [Bower](http://bower.io/) [![Bower version](https://badge.fury.io/bo/code-point.svg)](https://github.com/shinnn/code-point.js/releases)
+#### [Bower](http://bower.io/)
 
 ```sh
-bower i --save code-point
+bower install code-point
 ```
 
 #### [Duo](http://duojs.org/)
@@ -73,8 +75,8 @@ Author: [Mathias Bynens][mathias]
 
 ### code-point.js
 
-Copyright (c) 2014 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2014 - 2015 [Shinnosuke Watanabe](https://github.com/shinnn)
 
-Licensed under [the MIT License](https://github.com/shinnn/code-point/blob/master/LICENSE.md#code-pointjs).
+Licensed under [the MIT License](https://github.com/shinnn/code-point/blob/master/LICENSES.md#code-pointjs).
 
 [mathias]: https://mathiasbynens.be/
