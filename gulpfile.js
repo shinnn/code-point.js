@@ -25,14 +25,16 @@ var banner = [
 ].join('\n');
 
 gulp.task('lint', function() {
-  gulp.src('{,src/}*.js')
-    .pipe($.jscs(pkg.jscsConfig))
-    .pipe($.jshint())
-    .pipe($.jshint.reporter(stylish))
-    .pipe($.jshint.reporter('fail'));
-  gulp.src('*.json')
-    .pipe($.jsonlint())
-    .pipe($.jsonlint.reporter());
+  return mergeStream(
+    gulp.src('{,src/}*.js')
+      .pipe($.jscs(pkg.jscsConfig))
+      .pipe($.jshint())
+      .pipe($.jshint.reporter(stylish))
+      .pipe($.jshint.reporter('fail')),
+    gulp.src('*.json')
+      .pipe($.jsonlint())
+      .pipe($.jsonlint.reporter())
+  );
 });
 
 gulp.task('clean', rimraf.bind(null, 'dist'));
