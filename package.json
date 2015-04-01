@@ -4,7 +4,8 @@
   "description": "Get a UTF-16-encoded code point number of a character",
   "main": "dist/code-point-cjs.js",
   "files": [
-    "dist/code-point-cjs.js"
+    "dist/code-point-cjs.js",
+    "LICENSES.md"
   ],
   "scripts": {
     "test": "gulp test",
@@ -20,7 +21,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/shinnn/code-point.js/blob/master/LICENSE"
+      "url": "https://github.com/shinnn/code-point.js/blob/master/LICENSES.md"
     }
   ],
   "keywords": [
