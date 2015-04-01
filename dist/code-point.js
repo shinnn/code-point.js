@@ -29,10 +29,10 @@ if (String.prototype.codePointAt) {
 
 function codePoint(str) {
   if (typeof str !== 'string') {
-    throw new TypeError(str + ' is not a string.');
+    throw new TypeError(str + ' is not a string. Argument must be a string.');
   }
   if (!str.length) {
-    throw new Error('Argument should be non-empty string.');
+    throw new Error('Argument must be a non-empty string.');
   }
 
   return getCodePoint(str);
