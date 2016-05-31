@@ -3,7 +3,6 @@
 [![NPM version](https://img.shields.io/npm/v/code-point.svg)](https://www.npmjs.com/package/code-point)
 [![Bower version](https://img.shields.io/bower/v/code-point.svg)](https://github.com/shinnn/code-point.js/releases)
 [![Build Status](https://travis-ci.org/shinnn/code-point.js.svg?branch=master)](https://travis-ci.org/shinnn/code-point.js)
-[![Build status](https://ci.appveyor.com/api/projects/status/riy7hl0n8e2vprch?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/code-point-js)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/code-point.js.svg)](https://coveralls.io/r/shinnn/code-point.js)
 [![devDependency Status](https://david-dm.org/shinnn/code-point.js/dev-status.svg)](https://david-dm.org/shinnn/code-point.js#info=devDependencies)
 
@@ -35,7 +34,7 @@ bower install code-point
 
 ### Standalone
 
-[Download the script file directly.](https://raw.githubusercontent.com/shinnn/code-point.js/master/dist/code-point.js)
+[Download the script file directly.](https://raw.githubusercontent.com/shinnn/code-point.js/master/browser.js)
 
 ## API
 
@@ -65,7 +64,7 @@ This module includes the code of [mathiasbynens](https://github.com/mathiasbynen
 
 Author: [Mathias Bynens][mathias]
 
-> This polyfill is available under the [MIT](http://opensource.org/licenses/mit-license.php) license.
+> This polyfill is available under the [MIT](https://opensource.org/licenses/mit-license) license.
 
 ### code-point.js
 
