@@ -33,7 +33,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 (The MIT License)
 
-Copyright (c) 2014 - 2015 Shinnosuke Watanabe 
+Copyright (c) 2014 - 2016 Shinnosuke Watanabe 
 
 
 Permission is hereby granted, free of charge, to any person obtaining

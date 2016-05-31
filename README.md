@@ -7,7 +7,7 @@
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/code-point.js.svg)](https://coveralls.io/r/shinnn/code-point.js)
 [![devDependency Status](https://david-dm.org/shinnn/code-point.js/dev-status.svg)](https://david-dm.org/shinnn/code-point.js#info=devDependencies)
 
-Get a [UTF-16](http://wikipedia.org/wiki/UTF-16)-encoded code point number of a character
+Get a [UTF-16](https://wikipedia.org/wiki/UTF-16)-encoded code point number of a character
 
 ```javascript
 codePoint('A'); //=> 65
@@ -23,20 +23,14 @@ codePoint('嶲'); //=> 195060
 
 #### [npm](https://www.npmjs.com/)
 
-```sh
+```
 npm install code-point
 ```
 
 #### [Bower](http://bower.io/)
 
-```sh
-bower install code-point
 ```
-
-#### [Duo](http://duojs.org/)
-
-```javascript
-var codePoint = require('shinnn/code-point.js');
+bower install code-point
 ```
 
 ### Standalone
@@ -75,7 +69,7 @@ Author: [Mathias Bynens][mathias]
 
 ### code-point.js
 
-Copyright (c) 2014 - 2015 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2014 - 2016 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](https://github.com/shinnn/code-point/blob/master/LICENSES.md#code-pointjs).
 

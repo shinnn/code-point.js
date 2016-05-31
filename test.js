@@ -1,58 +1,52 @@
-/*jshint unused:true */
-'use strict';
+'use strong';
 
-var requireUncached = require('require-uncached');
-var test = require('tape');
+const {test} = require('tap');
 
-var codePoint;
+function runTest(description, fn) {
+  test(`${description}${'TEST_ON_ES5' in process.env ? ' on ES5 environment' : ''}`, t => {
+    t.strictEqual(
+      fn('0'),
+      48,
+      description + 'return a UTF-16-encoded code point of the character.'
+    );
 
-function runTest(t) {
-  t.plan(6);
+    t.strictEqual(
+      fn('\ud800\udc00'),
+      65536,
+      'should return a code point of the character which uses a surrogate pair.'
+    );
 
-  t.equals(
-    codePoint('0'),
-    48,
-    'should return a UTF-16-encoded code point of the character.'
-  );
+    t.strictEqual(
+      fn('\udbffa'),
+      56319,
+      'should return a code point value of the string\'s first character.'
+    );
 
-  t.equals(
-    codePoint('\ud800\udc00'),
-    65536,
-    'should return a code point value of the character which uses a surrogate pair.'
-  );
+    t.throws(
+      () => fn(),
+      /undefined is not a string\. Argument must be a string\./,
+      'should throw a type error when it takes no arguments.'
+    );
 
-  t.equals(
-    codePoint('\udbffa'),
-    56319,
-    'should return a code point value of the string\'s first character.'
-  );
+    t.throws(
+      () => fn(1),
+      /1 is not a string\. Argument must be a string\./,
+      'should throw a type error when the argument is not a string.'
+    );
 
-  t.throws(
-    codePoint.bind(null),
-    /TypeError/,
-    'should throw a type error when it takes no arguments.'
-  );
+    t.throws(
+      () => fn(''),
+      /empty/,
+      'should throw an error when the argument is an empty string.'
+    );
 
-  t.throws(
-    codePoint.bind(null, 1),
-    /TypeError/,
-    'should throw a type error when the argument is not a string.'
-  );
-
-  t.throws(
-    codePoint.bind(null, ''),
-    /empty/,
-    'should throw an error when the argument is an empty string.'
-  );
+    t.end();
+  });
 }
 
-test('codePoint()', function(t) {
-  codePoint = requireUncached('./');
-  runTest(t);
-});
+runTest('require(\'code-point\')', require('.'));
 
-test('codePoint() on ES5 environment', function(t) {
-  String.prototype.codePointAt = undefined;
-  codePoint = requireUncached('./');
-  runTest(t);
-});
+global.window = {};
+require('./' + require('./bower.json').main);
+
+runTest('window.codePoint', global.window.codePoint);

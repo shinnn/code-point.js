@@ -2,28 +2,17 @@
   "name": "code-point",
   "version": "1.0.1",
   "description": "Get a UTF-16-encoded code point number of a character",
-  "main": "dist/code-point-cjs.js",
   "files": [
-    "dist/code-point-cjs.js",
+    "index.js",
     "LICENSES.md"
   ],
   "scripts": {
-    "test": "gulp test",
-    "coverage": "istanbul cover test.js",
-    "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
+    "pretest": "eslint --fix --config @shinnn --ignore-path .gitignore .",
+    "test": "tap --node-arg=--strong_mode --coverage test.js test-es5.js"
   },
-  "author": {
-    "name": "Shinnosuke Watanabe",
-    "email": "snnskwtnb@gmail.com",
-    "url": "https://github.com/shinnn"
-  },
+  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "repository": "shinnn/code-point.js",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/shinnn/code-point.js/blob/master/LICENSES.md"
-    }
-  ],
+  "license": "MIT",
   "keywords": [
     "code",
     "point",
@@ -41,27 +30,8 @@
     "client-side"
   ],
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-footer": "^1.0.5",
-    "gulp-header": "^1.2.2",
-    "gulp-jscs": "^1.4.0",
-    "gulp-jshint": "^1.9.4",
-    "gulp-jsonlint": "^1.0.2",
-    "gulp-load-plugins": "^0.9.0",
-    "gulp-rename": "^1.2.0",
-    "istanbul": "^0.3.13",
-    "istanbul-coveralls": "^1.0.2",
-    "jshint-stylish": "^1.0.1",
-    "merge-stream": "^0.1.7",
-    "require-uncached": "^1.0.2",
-    "rimraf": "^2.3.2",
-    "tape": "^3.5.0",
-    "to-camel-case": "^0.2.1"
-  },
-  "jscsConfig": {
-    "preset": "google",
-    "maximumLineLength": 98,
-    "requireBlocksOnNewline": true,
-    "validateLineBreaks": "LF"
+    "@shinnn/eslint-config": "^2.3.0",
+    "eslint": "^2.11.1",
+    "tap": "^5.7.2"
   }
 }

@@ -1,6 +1,5 @@
 {
   "name": "code-point",
-  "version": "1.0.0",
   "description": "Get a UTF-16-encoded code point number of a character",
   "keywords": [
     "code",
@@ -16,17 +15,15 @@
     "surrogate",
     "plane"
   ],
-  "main": "dist/code-point.js",
+  "main": "browser.js",
+  "moduleType": "globals",
   "homepage": "https://github.com/shinnn/code-point.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/shinnn/code-point.js.git"
   },
   "authors": [
-    {
-      "name": "Shinnosuke Watanabe",
-      "url": "https://github.com/shinnn"
-    }
+    "Shinnosuke Watanabe (https://github.com/shinnn)"
   ],
   "license": "MIT",
   "ignore": [
@@ -34,8 +31,6 @@
     "*.js",
     "*.json",
     "*.yml",
-    "dist/code-point-cjs.js",
-    "node_modules",
-    "src"
+    "node_modules"
   ]
 }
