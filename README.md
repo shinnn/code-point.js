@@ -9,11 +9,11 @@
 Get a [UTF-16](https://wikipedia.org/wiki/UTF-16)-encoded code point number of a character
 
 ```javascript
-codePoint('A'); //=> 65
 'A'.charCodeAt(0); //=> 65
+codePoint('A'); //=> 65
 
-codePoint('嶲'); //=> 195060
 '嶲'.charCodeAt(0); //=> 55422
+codePoint('嶲'); //=> 195060
 ```
 
 ## Installation
@@ -52,7 +52,7 @@ codePoint('\udada'); //=> 56026
 codePoint('\udada\udfdf'); //=> 814047
 ```
 
-It works even if the [`String`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) object doesn't have [codePointAt](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt) method as its prototype.
+It works correctly even in ECMAScript <= 5 environments that don't support  [`String.prototype.codePointAt`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/codePointAt).
 
 ## Credit
 
