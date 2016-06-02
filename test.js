@@ -1,5 +1,7 @@
 'use strong';
 
+const requireFromString = require('require-from-string');
+const {rollup} = require('rollup');
 const {test} = require('tap');
 
 function runTest(description, fn) {
@@ -44,9 +46,13 @@ function runTest(description, fn) {
   });
 }
 
-runTest('require(\'code-point\')', require('.'));
+rollup({entry: require('./package.json')['jsnext:main']}).then(bundle => {
+  runTest('require(\'code-point\')', require('.'));
 
-global.window = {};
-require('./' + require('./bower.json').main);
+  global.window = {};
+  require('./' + require('./bower.json').main);
 
-runTest('window.codePoint', global.window.codePoint);
+  runTest('window.codePoint', global.window.codePoint);
+
+  runTest('Module exports', requireFromString(bundle.generate({format: 'cjs'}).code, 'indedx.jsnext.js'));
+});

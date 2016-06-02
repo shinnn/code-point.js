@@ -2,8 +2,10 @@
   "name": "code-point",
   "version": "1.0.1",
   "description": "Get a UTF-16-encoded code point number of a character",
+  "jsnext:main": "index.jsnext.js",
   "files": [
     "index.js",
+    "index.jsnext.js",
     "LICENSES.md"
   ],
   "scripts": {
@@ -32,6 +34,8 @@
   "devDependencies": {
     "@shinnn/eslint-config": "^2.3.0",
     "eslint": "^2.11.1",
+    "require-from-string": "^1.2.0",
+    "rollup": "^0.26.3",
     "tap": "^5.7.2"
   }
 }
