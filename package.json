@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "pretest": "eslint --fix --config @shinnn --ignore-path .gitignore .",
-    "test": "tap --node-arg=--strong_mode --coverage test.js test-es5.js"
+    "test": "tap --coverage test.js test-es5.js"
   },
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "repository": "shinnn/code-point.js",
