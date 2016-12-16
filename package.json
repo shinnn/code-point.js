@@ -9,7 +9,7 @@
     "LICENSES.md"
   ],
   "scripts": {
-    "pretest": "eslint --fix --config @shinnn --ignore-path .gitignore .",
+    "pretest": "eslint --fix --format=codeframe --ignore-path .gitignore .",
     "test": "tap --coverage test.js test-es5.js"
   },
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
@@ -32,10 +32,13 @@
     "client-side"
   ],
   "devDependencies": {
-    "@shinnn/eslint-config": "^3.0.2",
-    "eslint": "^3.4.0",
-    "require-from-string": "^1.2.0",
-    "rollup": "^0.34.13",
-    "tap": "^7.0.0"
+    "@shinnn/eslint-config": "^3.3.5",
+    "eslint": "^3.12.2",
+    "require-from-string": "^1.2.1",
+    "rollup": "^0.37.0",
+    "tap": "^8.0.1"
+  },
+  "eslintConfig": {
+    "extends": "@shinnn"
   }
 }
