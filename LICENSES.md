@@ -27,13 +27,13 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-### code-point.js
+### code-point
 
 <https://github.com/shinnn/code-point.js>
 
 (The MIT License)
 
-Copyright (c) 2014 - 2016 Shinnosuke Watanabe 
+Copyright (c) 2014 - 2018 Shinnosuke Watanabe
 
 
 Permission is hereby granted, free of charge, to any person obtaining

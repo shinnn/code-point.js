@@ -1,10 +1,8 @@
-# code-point.js
+# code-point
 
-[![NPM version](https://img.shields.io/npm/v/code-point.svg)](https://www.npmjs.com/package/code-point)
-[![Bower version](https://img.shields.io/bower/v/code-point.svg)](https://github.com/shinnn/code-point.js/releases)
-[![Build Status](https://travis-ci.org/shinnn/code-point.js.svg?branch=master)](https://travis-ci.org/shinnn/code-point.js)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/code-point.js.svg)](https://coveralls.io/r/shinnn/code-point.js)
-[![devDependency Status](https://david-dm.org/shinnn/code-point.js/dev-status.svg)](https://david-dm.org/shinnn/code-point.js#info=devDependencies)
+[![npm version](https://img.shields.io/npm/v/code-point.svg)](https://www.npmjs.com/package/code-point)
+[![Build Status](https://travis-ci.com/shinnn/code-point.js.svg?branch=master)](https://travis-ci.com/shinnn/code-point.js)
+[![Coverage Status](https://coveralls.io/github/shinnn/code-point.js)
 
 Get a [UTF-16](https://wikipedia.org/wiki/UTF-16)-encoded code point number of a character
 
@@ -18,30 +16,22 @@ codePoint('嶲'); //=> 195060
 
 ## Installation
 
-### Package managers
-
-#### [npm](https://www.npmjs.com/)
+[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/about-npm/).
 
 ```
 npm install code-point
 ```
 
-#### [Bower](http://bower.io/)
-
-```
-bower install code-point
-```
-
-### Standalone
-
-[Download the script file directly.](https://raw.githubusercontent.com/shinnn/code-point.js/master/browser.js)
-
 ## API
+
+```javascript
+import codePoint from 'code-point';
+```
 
 ### codePoint(*character*)
 
-*character*: `String`  
-Return: `Number`
+*character*: `string`  
+Return: `number`
 
 If it takes a string as an argument, it returns the same result of `character.codePointAt(0)`.
 
@@ -66,9 +56,9 @@ Author: [Mathias Bynens][mathias]
 
 > This polyfill is available under the [MIT](https://opensource.org/licenses/mit-license) license.
 
-### code-point.js
+### code-point
 
-Copyright (c) 2014 - 2016 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2014 - 2018 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](https://github.com/shinnn/code-point/blob/master/LICENSES.md#code-pointjs).
 
