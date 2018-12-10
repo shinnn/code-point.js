@@ -1,44 +1,50 @@
 {
-  "name": "code-point",
-  "version": "2.0.0-0",
-  "description": "Get a UTF-16-encoded code point number of a character",
-  "jsnext:main": "index.jsnext.js",
-  "files": [
-    "index.js",
-    "index.jsnext.js",
-    "LICENSES.md"
-  ],
-  "scripts": {
-    "pretest": "eslint --fix --format=codeframe --ignore-path .gitignore .",
-    "test": "tap --coverage test.js test-es5.js"
-  },
-  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
-  "repository": "shinnn/code-point.js",
-  "license": "MIT",
-  "keywords": [
-    "code",
-    "point",
-    "code-point",
-    "string",
-    "char",
-    "character",
-    "unicode",
-    "utf16",
-    "utf-16",
-    "codepointat",
-    "surrogate",
-    "plane",
-    "browser",
-    "client-side"
-  ],
-  "devDependencies": {
-    "@shinnn/eslint-config": "^3.3.5",
-    "eslint": "^3.12.2",
-    "require-from-string": "^1.2.1",
-    "rollup": "^0.37.0",
-    "tap": "^8.0.1"
-  },
-  "eslintConfig": {
-    "extends": "@shinnn"
-  }
+	"name": "code-point",
+	"version": "2.0.0-0",
+	"description": "Get a UTF-16-encoded code point number of a character",
+	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
+	"repository": "shinnn/code-point.js",
+	"license": "MIT",
+	"module": "index.mjs",
+	"files": [
+		"index.js",
+		"index.mjs",
+		"LICENSES.md"
+	],
+	"scripts": {
+		"pretest": "eslint .",
+		"test": "nyc tape test.js"
+	},
+	"keywords": [
+		"code",
+		"point",
+		"code-point",
+		"string",
+		"char",
+		"character",
+		"unicode",
+		"utf16",
+		"utf-16",
+		"codepointat",
+		"surrogate",
+		"plane",
+		"browser",
+		"client-side"
+	],
+	"devDependencies": {
+		"@shinnn/eslint-config": "^6.8.4",
+		"clear-module": "^3.0.0",
+		"eslint": "^5.10.0",
+		"nyc": "^13.1.0",
+		"nyc-config-common": "^1.0.1",
+		"rollup": "^0.67.4",
+		"rollup-config-module": "^2.0.1",
+		"tape": "^4.9.1"
+	},
+	"eslintConfig": {
+		"extends": "@shinnn"
+	},
+	"nyc": {
+		"extends": "nyc-config-common"
+	}
 }
